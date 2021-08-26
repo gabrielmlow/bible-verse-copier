@@ -1,7 +1,7 @@
 let verse = "";
 let bible = "";
 let verseCount = 0;
-const verseLimit = 4;
+const verseLimit = 3;
 
 
 window.setInterval(function() {
@@ -33,13 +33,12 @@ window.setInterval(function() {
         verseEl.classList.add('verse');
         contentEl.classList.add('content')
     
-        cardEl.appendChild(verseText);
+        verseEl.appendChild(verseText);
         contentEl.appendChild(contentText);
-    
+
         document.body.appendChild(cardEl);  
-        // footerEl.prepend(cardEl); 
         cardEl.appendChild(verseEl);
         cardEl.appendChild(contentEl)
     }
-    
+
 }, 1000);
