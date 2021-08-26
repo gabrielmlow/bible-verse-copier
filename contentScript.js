@@ -1,7 +1,7 @@
 let verse = "";
 let bible = "";
 let verseCount = 0;
-const verseLimit = 3;
+const verseLimit = 4;
 
 
 window.setInterval(function() {
@@ -17,7 +17,7 @@ window.setInterval(function() {
         bible = currentBible;
 
         if (verseCount >= verseLimit) {
-            document.body.removeChild(document.body.children[1]);
+            document.body.removeChild(document.body.children[verseLimit]);
         } else {
             verseCount += 1
         }
@@ -28,6 +28,8 @@ window.setInterval(function() {
         const cardEl = document.createElement('div');
         const verseEl = document.createElement('div');
         const contentEl = document.createElement('div');
+
+        const formEl = document.getElementById("form1")
     
         cardEl.classList.add('card');
         verseEl.classList.add('verse');
@@ -36,9 +38,15 @@ window.setInterval(function() {
         verseEl.appendChild(verseText);
         contentEl.appendChild(contentText);
 
-        document.body.appendChild(cardEl);  
+        insertAfter(formEl, cardEl);
+        // document.body.appendChild(cardEl);  
         cardEl.appendChild(verseEl);
         cardEl.appendChild(contentEl)
     }
 
 }, 1000);
+
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
