@@ -3,14 +3,11 @@ let bible = "";
 let verseCount = 0;
 const verseLimit = 4;
 
-// Fix For French
+
 window.setInterval(function() {
 
     const currentVerse = document.getElementById("pVerse").innerText;
     const currentBible = document.getElementById("pTranslation").innerText;
-    // const UpdatePanel1 = document.getElementById("UpdatePanel1");
-
-    // const footerEl = document.getElementsByClassName("footer");
 
     if (verse !== currentVerse || bible !== currentBible) {
 
@@ -43,7 +40,6 @@ window.setInterval(function() {
         // footerEl.prepend(cardEl); 
         cardEl.appendChild(verseEl);
         cardEl.appendChild(contentEl)
-        
     }
     
 }, 1000);
