@@ -1,7 +1,7 @@
 {
     "name": "Bible Copier Extension",
     "description": "Bible Version Copier Extension",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "manifest_version": 3,
     "icons": { 
         "16": "icon.png",
@@ -19,7 +19,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://bible.mcgi.org/DigitalBible/*", "https://bible.addcit.org/DigitalBible/*"],
+            "matches": ["https://bible.mcgi.org/DigitalBible/*", "https://bible.addcit.org/DigitalBible/*", "http://bible.addcit.org/DigitalBible/*", "http://bible.mcgi.org/DigitalBible/*"],
             "js": ["contentScript.js"] ,
             "css": ["contentScript.css"]
         }
