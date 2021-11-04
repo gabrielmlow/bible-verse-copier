@@ -1,0 +1,35 @@
+{
+    "name": "Bible Copier Extension",
+    "description": "Bible Version Copier Extension",
+    "version": "1.2.2",
+    "manifest_version": 3,
+    "icons": { 
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png" 
+    },
+    "action": {
+        "default_title": "Bible Copier",
+        "default_icon": {             
+            "16": "icon.png",   
+            "24": "icon.png",   
+            "32": "icon.png"   
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://bible.mcgi.org/*", "*://bible.addcit.org/*"],
+            "js": ["contentScript.js"] ,
+            "css": ["contentScript.css"]
+        },
+        {
+            "matches": ["*://apps.mcgi.me/bible/op1.html"],
+            "js": ["contentScript2.js"] ,
+            "css": ["contentScript.css"]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
